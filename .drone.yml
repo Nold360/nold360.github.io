@@ -2,14 +2,14 @@ kind: pipeline
 type: kubernetes
 steps:
 - name: Website
-  image: node:12
+  image: node:14
   commands:
     - mkdir -p $HOME/.ssh
     - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
     - echo "$GITHUB_PRIVATE_KEY" > "$HOME/.ssh/id_rsa"
     - chmod 0600 $HOME/.ssh/id_rsa
     - npm i
-    - npm run publish-gh-pages
+    - npm run deploy
   environment:
     USE_SSH: "true"
     GIT_USER: $DRONE_COMMIT_AUTHOR
