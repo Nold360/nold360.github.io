@@ -2,7 +2,7 @@ kind: pipeline
 type: kubernetes
 steps:
 - name: Website
-  image: node
+  image: node:12
   commands:
     - mkdir -p $HOME/.ssh
     - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
