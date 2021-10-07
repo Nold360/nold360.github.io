@@ -1,13 +1,14 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Nold's Wiki",
-  url: "https://nold.in",
+  url: "https://nold360.github.io",
   baseUrl: "/",
+  trailingSlash: false,
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "/img/favicon.ico",
-  organizationName: "noldtronics",
-  projectName: "wiki",
+  organizationName: "nold360",
+  projectName: "nold360.github.io",
   themeConfig: {
     colorMode: {
       defaultMode: "dark",
