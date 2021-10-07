@@ -13,5 +13,6 @@ steps:
   environment:
     USE_SSH: "true"
     GIT_USER: $DRONE_COMMIT_AUTHOR
+    DEPLOYMENT_BRANCH: master
     GITHUB_PRIVATE_KEY:
       from_secret: ssh_key
