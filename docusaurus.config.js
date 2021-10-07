@@ -3,7 +3,7 @@ module.exports = {
   title: "Nold's Wiki",
   url: "https://nold360.github.io",
   baseUrl: "/",
-  trailingSlash: false,
+  trailingSlash: true,
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "/img/favicon.ico",
