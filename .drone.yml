@@ -1,5 +1,10 @@
 kind: pipeline
 type: kubernetes
+
+trigger:
+  branch:
+  - master
+
 steps:
 - name: Website
   image: node:14
