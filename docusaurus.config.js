@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Nold's Wiki",
-  url: "https://nold360.github.io",
+  url: "https://wiki.nold.in",
   baseUrl: "/",
   trailingSlash: true,
   onBrokenLinks: "warn",
