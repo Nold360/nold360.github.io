@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknoldwiki=self.webpackChunknoldwiki||[]).push([[121],{8070:function(e){e.exports=JSON.parse('[{"name":"cyberdeck","permalink":"/tags/cyberdeck","count":1},{"name":"diy","permalink":"/tags/diy","count":1},{"name":"modding","permalink":"/tags/modding","count":1},{"name":"hardware","permalink":"/tags/hardware","count":1}]')}}]);
