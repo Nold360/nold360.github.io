@@ -69,8 +69,8 @@ I will design the case from scratch in fusion 360 and will be made open source i
 
 To match the eDP interface of the Rock Pi N10 to the display, i had to design a custom PCB. The design is already finished & the PCBs have been produced by OSHPark.
 
-![PCB-Front](Projects/assets/cyberdeck/edp-adapter-pcb-front.png)
-![PCB-Back](Projects/assets/cyberdeck/edp-adapter-pcb-back.png)
+![PCB-Front](assets/cyberdeck/edp-adapter-pcb-front.png)
+![PCB-Back](assets/cyberdeck/edp-adapter-pcb-back.png)
 
 
 ## Software
