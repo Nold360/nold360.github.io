@@ -67,32 +67,35 @@ I will design the case from scratch in fusion 360 and will be made open source i
 
 ### eDP Adapter
 
-To match the eDP interface of the Rock Pi N10 to the display, i'll need to design a custom PCB. The design is already done & ready for manifacturing using JLCPCB.
+To match the eDP interface of the Rock Pi N10 to the display, i had to design a custom PCB. The design is already finished & the PCBs have been produced by OSHPark.
+
+![PCB-Front](Projects/assets/cyberdeck/edp-adapter-pcb-front.png)
+![PCB-Back](Projects/assets/cyberdeck/edp-adapter-pcb-back.png)
 
 
 ## Software
 
 ### Theming XFCE
 
-https://www.xfce-look.org/p/1320508/
-https://www.xfce-look.org/p/1400299/
-https://www.xfce-look.org/p/1559880/
-https://www.xfce-look.org/p/1315893/
-https://www.xfce-look.org/p/1408367/
-https://www.xfce-look.org/p/1306506/
-https://www.xfce-look.org/p/1508333/
-https://www.xfce-look.org/p/1613474/
-https://www.pling.com/p/1235909/
+- https://www.xfce-look.org/p/1320508/
+- https://www.xfce-look.org/p/1400299/
+- https://www.xfce-look.org/p/1559880/
+- https://www.xfce-look.org/p/1315893/
+- https://www.xfce-look.org/p/1408367/
+- https://www.xfce-look.org/p/1306506/
+- https://www.xfce-look.org/p/1508333/
+- https://www.xfce-look.org/p/1613474/
+- https://www.pling.com/p/1235909/
 
 ### Icons
 
-https://www.xfce-look.org/s/XFCE/p/1460991
-https://www.xfce-look.org/s/XFCE/p/1316887
-https://www.xfce-look.org/s/XFCE/p/1436570
+- https://www.xfce-look.org/s/XFCE/p/1460991
+- https://www.xfce-look.org/s/XFCE/p/1316887
+- https://www.xfce-look.org/s/XFCE/p/1436570
 
 ### Conky
 
-https://www.pling.com/p/1115068
-https://www.pling.com/p/1112273
-https://www.pling.com/p/1114967
-https://www.pling.com/p/1197920
+- https://www.pling.com/p/1115068
+- https://www.pling.com/p/1112273
+- https://www.pling.com/p/1114967
+- https://www.pling.com/p/1197920
