@@ -1,7 +1,7 @@
 ---
 title: My FAILED Cyberdeck Build
 id: failcyberdeck
-slug: /Cyberdeck
+slug: /Cyberfail
 tags:
   - cyberdeck
   - fail
