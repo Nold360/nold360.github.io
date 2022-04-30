@@ -37,7 +37,7 @@ The deck is supposed to be a portable computer like a notebook. Small but usable
 ### Could have / other ideas
 
  - [ ] GPS with internal antenna
- - [ ]Solar panel for charging
+ - [ ] Solar panel for charging
  - [x] External wifi antenna
  - [x] LoRa/WAN
 
@@ -101,8 +101,71 @@ Follow the QMK Docs - lol.
 qmk setup --home /home/nold/git/qmk
 ```
 
+## RetroPSU Linux integration
+
+I wanted to integrate the RetroPSU in a native Linux way to get the actuall battery status in lm-sensors. 
+
+To acomplish this, i had to dig into devicetrees and was quite successfull.
+
+### Devicetree Modifications
+
+Here is the part of my DTS-File that defindes RetroPSUs ADC chip [a TI ADS1015] connected to the I2C bus number 2.
+
+```
+&i2c2 {
+	adc: ads1015@48 {
+		compatible = "ti,ads1015";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		#io-channel-cells = <1>;
+
+		// I2C Address:
+		reg = <0x48>;
+
+		// RetroPSU uses ADC0 to GND convertion, so that's channel 4:
+		adc1: channel@4 {
+			reg = <4>;
+			ti,gain = <0>;
+			ti,datarate = <0>;
+		};
+	};
+};
+```
+
+This creates a IIO-Device you can check out under `/sys/bus/iio/devices/`.
+
+Next I wanted to get the voltage of the battery as a battery- or sensor device. Luckily there was something called "iio-hwmon", which allows using a IIO-Device as hwmon-device [which will be useable in lm-sensors].
+
+So here is another DTS snippet:
+```
+/ {
+...
+	iio-hwmon-retropsu {
+		compatible = "iio-hwmon";
+		io-channels = <&adc 4>;
+	};
+...
+};
+```
+
+This is fairly straight forward: it defined a hwmon device, pointing the the ADC on channel 4.
+
+
+And this is the result:
+``` shell
+$ sensors
+iio_hwmon_retropsu-isa-0000
+Adapter: ISA adapter
+in1:           4.20 V  
+```
+
+Not a "Battery", yet. But I can live with the battery voltage level for now.
+
+
 
 ## Software
+
+No cyberdeck is complete without some cyber-eye-candy!
 
 ### Theming GTK / XFCE
 - [IOTA-GTK](https://www.xfce-look.org/p/1508333/)
@@ -126,13 +189,5 @@ qmk setup --home /home/nold/git/qmk
 - [Lyra](https://www.xfce-look.org/s/XFCE/p/1460991)
 - [material-black COLORS](https://www.xfce-look.org/s/XFCE/p/1316887)
 - [Infinity-Dark-Icons](https://www.xfce-look.org/s/XFCE/p/1436570)
-
-### Conky
-
-#### Installation
-
-`sudo apt-get install conky conky-all`
-
-#### Config
 
 
