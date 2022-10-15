@@ -1,4 +1,5 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+const path = require('path');
 module.exports = {
   title: "Nold's Wiki",
   url: "https://wiki.nold.in",
@@ -8,20 +9,11 @@ module.exports = {
   favicon: "/img/favicon.ico",
   organizationName: "nold360",
   projectName: "nold360.github.io",
+  //themes: ['@docusaurus/theme-classic'],
   themeConfig: {
     colorMode: {
       defaultMode: "dark",
       respectPrefersColorScheme: true,
-      switchConfig: {
-        darkIcon: "  ",
-        darkIconStyle: {
-          marginTop: "1px",
-        },
-        lightIcon: "  ",
-        lightIconStyle: {
-          marginTop: "1px",
-        },
-      },
     },
     navbar: {
       title: "Nold's Wiki",
@@ -50,7 +42,6 @@ module.exports = {
   },
   plugins: [
      [require.resolve('@cmfcmf/docusaurus-search-local'), {
-       docsRouteBasePath: '/',
      }]
   ],
   presets: [
@@ -62,13 +53,12 @@ module.exports = {
           routeBasePath: "/",
           editUrl: "https://github.com/nold360/wiki/edit/master/",
         },
-        themes: ['@docusaurus/theme-classic'],
         theme: {
           customCss: require.resolve("./static/css/custom.css"),
         }
       },
     ],
     //    ['@docusaurus/plugin-content-docs', { path: '/', routeBasePath: 'docs', include: ['*.md', '*.mdx']} ],
-    ['@docusaurus/plugin-content-blog', { path: 'blog', routeBasePath: 'blog', include: ['*.md', '*.mdx']} ],
+    //['@docusaurus/plugin-content-blog', { path: 'blog', routeBasePath: 'blog', include: ['*.md', '*.mdx']} ],
   ],
 };
