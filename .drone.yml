@@ -7,7 +7,7 @@ trigger:
 
 steps:
 - name: Website
-  image: node:14
+  image: node:16
   commands:
     - mkdir -p $HOME/.ssh
     - ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
