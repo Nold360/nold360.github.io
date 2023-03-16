@@ -30,7 +30,7 @@
     "prettier": "2.7.1",
     "styled-components": "^5.3.6",
     "stylelint": "14.14.0",
-    "stylelint-config-recommended": "9.0.0"
+    "stylelint-config-recommended": "11.0.0"
   },
   "browserslist": {
     "production": [
